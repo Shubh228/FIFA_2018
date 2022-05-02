@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DisplayFragment"
+    android:background="@drawable/background_photo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="230dp"
+            android:layout_height="173dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:fontFamily="@font/aclonica"/>
+
+            <RadioButton
+                android:id="@+id/radioContinent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continent"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:fontFamily="@font/aclonica"/>
+
+            <RadioButton
+                android:id="@+id/radioPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Points"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:fontFamily="@font/aclonica"/>
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="135dp"
+            android:layout_height="171dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/fifa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="382dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+            <TextView
+                android:id="@+id/teamHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="Team"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+            <TextView
+                android:id="@+id/contheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Continent"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="111dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+            <TextView
+                android:id="@+id/playedHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/aclonica"
+                android:text="P"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="227dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+            <TextView
+                android:id="@+id/wonHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/aclonica"
+
+                android:text="W"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="261dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+            <TextView
+                android:id="@+id/lostHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/aclonica"
+                android:text="L"
+
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="302dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+            <TextView
+                android:id="@+id/drawHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+
+                android:fontFamily="@font/aclonica"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="332dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+            <TextView
+                android:id="@+id/ptsHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Pts"
+
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="370dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/displayView"
+            android:layout_width="405dp"
+            android:layout_height="445dp"
+
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="311dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="31dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/footer_text"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="sheridan.android.assignment3_fifa.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment2"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_deleteFragment"
+            app:destination="@id/deleteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_displayFragment"
+            app:destination="@id/displayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editDisplayFragment"
+            app:destination="@id/editDisplayFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="sheridan.android.assignment3_fifa.fragments.AddFragment"
+        android:label="Add Team"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="sheridan.android.assignment3_fifa.fragments.EditFragment"
+        android:label="Edit Team"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/deleteFragment"
+        android:name="sheridan.android.assignment3_fifa.fragments.DeleteFragment"
+        android:label="Delete Team"
+        tools:layout="@layout/fragment_delete" >
+        <action
+            android:id="@+id/action_deleteFragment_self"
+            app:destination="@id/deleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="sheridan.android.assignment3_fifa.fragments.DisplayFragment"
+        android:label="Points Table"
+        tools:layout="@layout/fragment_display" />
+    <fragment
+        android:id="@+id/editDisplayFragment"
+        android:name="sheridan.android.assignment3_fifa.fragments.EditDisplayFragment"
+        android:label="Edit"
+        tools:layout="@layout/fragment_edit_display">
+        <action
+            android:id="@+id/action_editDisplayFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:popUpTo="@id/editDisplayFragment" />
+    </fragment>
+</navigation>

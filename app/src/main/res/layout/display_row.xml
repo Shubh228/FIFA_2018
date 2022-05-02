@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="70dp">
+
+<ImageView
+
+    android:id="@+id/flagImg"
+    android:layout_width="33dp"
+    android:layout_height="24dp"
+    android:paddingTop="5dp"
+    app:srcCompat="@drawable/sweden" />
+
+    <TextView
+        android:id="@+id/team"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Sweden"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/contName"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/aclonica"
+        android:text="S. America"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/gamesP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:text="00"
+                android:textSize="16dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/gamesW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="1dp"
+                android:text="00"
+                android:textSize="16dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/gamesL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="1dp"                android:text="00"
+                android:textSize="16dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/gamesD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="1dp"                android:text="00"
+                android:textSize="16dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="1dp"                android:text="00"
+                android:textSize="16dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
